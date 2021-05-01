@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .rcorners {
+            border-radius: 25px;
+            background: #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+    </style>
     <title>One Word</title>
     <script defer src="main.js"></script>
 </head>
@@ -10,7 +19,7 @@
     <div id="main">
         <img id="image">
         <form method="post" enctype="multipart/form-data" action="/upload">
-            <input type="file" name="file" id="upload" accept="image/png, image/jpeg"></input>
+            <input type="file" class = "rcorners" name="file" id="upload" accept="image/png, image/jpeg"></input>
             <input type="submit" value="Submit">
         </form>
     </div>
