@@ -1,10 +1,14 @@
-const http = require('http');
+var http = require('http');
+var fs = require('fs');
+const createServer = require('connect');
 
-const server = http.createServer(function(req,res){
-    res.statusCode = 200;
-    res.end();
-});
+const PORT = 3000;
 
-server.listen(3000,function(){
-    console.log("Listening on port http://localhost:3000");
+fs.readFile('./index.html',function(err,html){
+    if(err){throw err;}
+    http.createServer(function(request,response){
+        response.writeHeader(200,{"Content-Type":"text/html"});
+        response.write(html);
+        response.end();
+    }).listen(PORT);
 });
