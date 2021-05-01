@@ -5,5 +5,4 @@ upload.addEventListener('change', (event) =>{
     const files = event.target.files;
     image.src = URL.createObjectURL(files[0]);
 
-    console.log(files);
 });

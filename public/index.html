@@ -9,7 +9,10 @@
 <body>
     <div id="main">
         <img id="image">
-        <input type="file" id="upload" accept="image/png, image/jpeg"></input>
+        <form method="post" enctype="multipart/form-data" action="/upload">
+            <input type="file" name="file" id="upload" accept="image/png, image/jpeg"></input>
+            <input type="submit" value="Submit">
+        </form>
     </div>
 </body>
 </html>
