@@ -1,0 +1,1 @@
+const uploadButton = document.getElementById("upload");
