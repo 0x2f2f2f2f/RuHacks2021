@@ -17,6 +17,7 @@ const upload = multer({
 })
 app.post('/upload', upload.single('file'), (req, res, next) => {
     console.log(req.file);
+    res.sendStatus(200);
 });
 
 app.use(express.static('public'));
