@@ -2,7 +2,9 @@ var express = require("express");
 var app = express();
 
 app.get("/",function(request,response){
-    response.sendFile(__dirname+"/public/index.html");
+    express.static(root,[options])
+    app.use(express.static('public'));
+    response.sendFile(__dirname+"/index.html");
 });
 
 app.listen(3000);
