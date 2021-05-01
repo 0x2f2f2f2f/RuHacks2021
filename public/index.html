@@ -18,7 +18,16 @@
             -o-animation: fadeIn ease 2s;
             -ms-animation: fadeIn ease 2s;
         }
-        .fade-in {
+        .fade-indelay1 {
+            animation-delay: 2s;
+            animation: fadeIn ease 2s;
+            -webkit-animation: fadeIn ease 2s;
+            -moz-animation: fadeIn ease 2s;
+            -o-animation: fadeIn ease 2s;
+            -ms-animation: fadeIn ease 2s;
+        }
+        .fade-indelay2 {
+            animation-delay:4s;
             animation: fadeIn ease 2s;
             -webkit-animation: fadeIn ease 2s;
             -moz-animation: fadeIn ease 2s;
@@ -75,12 +84,12 @@
 </head>
 <body>
     <h1 class = "fade-in" style = "text-align:center">Welcome to One Word</h1>
-    <p class = "fade-in" style = "text-align:center">Upload an image to start</p> 
+    <p class = "fade-indelay1" style = "text-align:center">Upload an image to start</p> 
     <div id="main">
         <img id="image">
         <form method="post" enctype="multipart/form-data" action="/upload">
-            <input style = "text-align:center" type="file" class = "rcorners fade-in" name="file" id="upload" accept="image/png, image/jpeg"></input>
-            <input style = "text-align:center" type="submit" class = "rcorners fade-in" value="Submit">
+            <input style = "text-align:center" type="file" class = "rcorners fade-indelay2" name="file" id="upload" accept="image/png, image/jpeg"></input>
+            <input style = "text-align:center" type="submit" class = "rcorners fade-indelay2" value="Submit">
         </form>
     </div>
 </body>
