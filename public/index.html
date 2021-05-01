@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        .hide{
+            opacity:0;
+        }
         .rcorners {
             border-radius: 25px;
             background: #73AD21;
@@ -83,13 +86,13 @@
     <script defer src="main.js"></script>
 </head>
 <body>
-    <h1 class = "fade-in" style = "text-align:center">Welcome to One Word</h1>
-    <p class = "fade-indelay1" style = "text-align:center">Upload an image to start</p> 
+    <h1 class = "fade-in hide" style = "text-align:center">Welcome to One Word</h1>
+    <p class = "fade-indelay1 hide" style = "text-align:center">Upload an image to start</p> 
     <div id="main">
         <img id="image">
         <form method="post" enctype="multipart/form-data" action="/upload">
-            <input style = "text-align:center" type="file" class = "rcorners fade-indelay2" name="file" id="upload" accept="image/png, image/jpeg"></input>
-            <input style = "text-align:center" type="submit" class = "rcorners fade-indelay2" value="Submit">
+            <input style = "text-align:center" type="file" class = "rcorners fade-indelay2 hide" name="file" id="upload" accept="image/png, image/jpeg"></input>
+            <input style = "text-align:center" type="submit" class = "rcorners fade-indelay2 hide" value="Submit">
         </form>
     </div>
 </body>
