@@ -15,27 +15,21 @@
             height: 150px;
         }
         .fade-in {
-            animation: fadeIn ease 2s;
-            -webkit-animation: fadeIn ease 2s;
-            -moz-animation: fadeIn ease 2s;
-            -o-animation: fadeIn ease 2s;
-            -ms-animation: fadeIn ease 2s;
+            animation: fadeIn ease 3s;
+            -webkit-animation: fadeIn ease 3s;
+            -moz-animation: fadeIn ease 3s;
+            -o-animation: fadeIn ease 3s;
+            -ms-animation: fadeIn ease 3s;
         }
-        .fade-indelay1 {
-            animation: fadeIn ease 2s;
-            -webkit-animation: fadeIn ease 2s;
-            -moz-animation: fadeIn ease 2s;
-            -o-animation: fadeIn ease 2s;
-            -ms-animation: fadeIn ease 2s;
-            animation-delay: 2s;
-        }
-        .fade-indelay2 {
-            animation: fadeIn ease 2s;
-            -webkit-animation: fadeIn ease 2s;
-            -moz-animation: fadeIn ease 2s;
-            -o-animation: fadeIn ease 2s;
-            -ms-animation: fadeIn ease 2s;
-            animation-delay: 4s;
+        span::before {
+            content: 'content that needs a delay';
+            margin-top: 25px;
+            font-size: 21px;
+            text-align: center;
+            animation: fadein 4s;
+            -moz-animation: fadein 4s; /* Firefox */
+            -webkit-animation: fadein 4s; /* Safari and Chrome */
+            -o-animation: fadein 4s; /* Opera */
         }
         @keyframes fadeIn {
             0% {
@@ -87,7 +81,7 @@
 </head>
 <body>
     <h1 class = "fade-in hide" style = "text-align:center">Welcome to One Word</h1>
-    <p class = "fade-indelay1 hide" style = "text-align:center">Upload an image to start</p> 
+    <span><p class = "fade-indelay1 hide" style = "text-align:center">Upload an image to start</p> </span><span>
     <div id="main">
         <img id="image">
         <form method="post" enctype="multipart/form-data" action="/upload">
