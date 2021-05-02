@@ -1,0 +1,1 @@
+After git cloning the repository, run node server.js from your terminal. The app should display at https://localhost:3000 on any browser
