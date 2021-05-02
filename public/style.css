@@ -5,6 +5,10 @@
     width: 200px;
     height: 150px;
 }
+.secondDisplay{
+    display: none;
+    text-align: center;
+}
 .animated{
     -webkit-animation-fill-mode:both;
     -moz-animation-fill-mode:both;
