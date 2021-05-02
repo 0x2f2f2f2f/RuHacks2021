@@ -14,16 +14,16 @@
     -moz-animation-fill-mode:both;
     -ms-animation-fill-mode:both;
     animation-fill-mode:both;
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    -ms-animation-duration:1s;
-    animation-duration:1s;
+    -webkit-animation-duration:3s;
+    -moz-animation-duration:3s;
+    -ms-animation-duration:3s;
+    animation-duration:3s;
 }
 .animated.hinge{
-    -webkit-animation-duration:2s;
-    -moz-animation-duration:2s;
-    -ms-animation-duration:2s;
-    animation-duration:2s;
+    -webkit-animation-duration:3s;
+    -moz-animation-duration:3s;
+    -ms-animation-duration:3s;
+    animation-duration:3s;
 }
 @-webkit-keyframes fadeInUp {
     0% {
