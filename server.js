@@ -1,5 +1,6 @@
 var express = require("express");
 const multer = require('multer');
+const spawn = require("child_process").spawn;
 const fs = require('fs');
 var app = express();
 
@@ -17,7 +18,10 @@ const upload = multer({
 })
 app.post('/upload', upload.single('file'), (req, res, next) => {
     console.log(req.file);
-    res.sendStatus(200);
+    const pythonProcess = spawn('python', ["./test.py", req.file.filename]);
+    pythonProcess.stdout.on('data', (data) => {
+        res.send(data.toString());
+    });
 });
 
 app.use(express.static('public'));
