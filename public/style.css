@@ -57,6 +57,11 @@
     -moz-animation-name: fadeInUp;
     animation-name: fadeInUp;
 }
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;
