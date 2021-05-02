@@ -23,7 +23,7 @@ document.getElementById('imageForm').onsubmit = function(event){
         while(sentenceDiv.firstChild){
             sentenceDiv.removeChild(sentenceDiv.firstChild);
         }
-        
+
         var sentence = document.createElement("h1");
         var text = document.createTextNode(this.response);
         sentence.appendChild(text);

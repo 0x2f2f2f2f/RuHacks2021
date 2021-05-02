@@ -5,7 +5,7 @@ import pandas as pd
 from google.cloud import vision
 
 # set the os GCP APP variable
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'C:\Users\DeRya\Desktop\My Engineering Career\Personal Projects & Skill Development\RUHacks 2021\RU Hacks 2021-349d1f7b9c70.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'.\VisionAPIKey.json'
 # this is also just a placeholder for what was on my device
 # will need to change this to the json
 
@@ -14,7 +14,7 @@ client = vision.ImageAnnotatorClient()
 
 # image to send
 file_name = os.path.abspath(
-    r'C:\Users\DeRya\Desktop\My Engineering Career\Personal Projects & Skill Development\RUHacks 2021\example_01.png')
+    r'.\example_01.png')
 image_path = f'.\\{file_name}'
 
 # reading in the image file to memory

@@ -17,7 +17,7 @@ const upload = multer({
     })
 })
 app.post('/upload', upload.single('file'), (req, res, next) => {
-    console.log(req.file);
+    console.log(req);
     const pythonProcess = spawn('python', ["./test.py", req.file.filename]);
     pythonProcess.stdout.on('data', (data) => {
         res.send(data.toString());
