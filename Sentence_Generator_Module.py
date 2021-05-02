@@ -2,6 +2,7 @@
 # NP + VP
 # (T + N) + (V + P)
 import random as ran
+import sys
 #import VisionAPI_Module
 # the above import is currently bricked on my device, the json token will have to be updated.
 
@@ -26,7 +27,7 @@ def sentence(NP, Adverb1, VP1):
 # now i must make several different lists related to the different moods
 
 
-def loop(X):
+def loop(X, mood):
     T_1 = ['The', 'Their', 'Our', 'His', 'Her', 'That', 'This', 'Your']  # cap
     T_2 = ['the', 'their', 'our', 'his', 'her',
            'that', 'this', 'your']  # no cap
@@ -70,10 +71,10 @@ def loop(X):
 def main():
     # So what I'm thinking is the user will decide how many sentences they want to generate.
     # We will have to get this information from the server, refer to Kai's resource for information
-    X = int(input("How many sentences would you like to generate for your caption? "))
-    mood = VisionAPI_Module.mood_function(mood)
+    X = (int)(sys.argv[2])
+    mood = sys.argv[1]
     # this will call the module, and then ask for the mod
-    result = loop(X)  # generates X amount of sentence
+    result = loop(X, mood)  # generates X amount of sentence
 
 
 main()

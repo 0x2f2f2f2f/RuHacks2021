@@ -17,9 +17,15 @@ const upload = multer({
     })
 })
 app.post('/upload', upload.single('file'), (req, res, next) => {
-    const pythonProcess = spawn('python', ["./test.py", req.file.filename, req.body.amount]);
+    const pythonProcess = spawn('python', ["./VisionAPI_Module.py", `./uploads/${req.file.filename}`]);
     pythonProcess.stdout.on('data', (data) => {
-        res.send(data.toString());
+        console.log(req.body.amount);
+        pythonProcess.kill();
+        const secondPython = spawn('python', ["./Sentence_Generator_Module.py", data.toString().slice(0,-2), parseInt(req.body.amount)]);
+        secondPython.stdout.on('data', (finalData) => {
+            console.log(finalData.toString());
+            res.send(finalData.toString());
+        });
     });
 });
 
