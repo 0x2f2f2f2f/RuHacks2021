@@ -1,5 +1,6 @@
 const upload = document.getElementById("upload");
 const image = document.getElementById("image");
+const amount = document.getElementById("amount");
 const sentenceDiv = document.getElementById("sentences");
 
 $('.first').addClass('animated fadeInUp');
@@ -35,6 +36,7 @@ document.getElementById('imageForm').onsubmit = function(event){
     xhttp.open("POST", "/upload")
     var fileData = new FormData();
     fileData.append("file", upload.files[0]);
+    fileData.append("amount", amount.value);
 
     xhttp.send(fileData)
 }
