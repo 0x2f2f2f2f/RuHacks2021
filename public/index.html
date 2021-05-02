@@ -3,18 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <link rel="stylesheet" href="style.css">
         <title>One Word</title>
         <script defer src="main.js"></script>
     </head>
     <body>
-        <h1 class = "fade-in hide" style = "text-align:center">Welcome to One Word</h1>
-        <p class = "fade-indelay1 hide" style = "text-align:center">Upload an image to start</p> 
+        <h1 class = "first" style = "text-align:center">Welcome to One Word</h1>
+        <p class = "second" style = "text-align:center" style = "display:none">Upload an image to start</p> 
         <div id="main">
             <img id="image">
             <form method="post" enctype="multipart/form-data" action="/upload">
-                <input style = "text-align:center" type="file" class = "rcorners fade-indelay2 hide" name="file" id="upload" accept="image/png, image/jpeg"></input>
-                <input style = "text-align:center" type="submit" class = "rcorners fade-indelay2 hide" value="Submit">
+                <input style = "text-align:center" style = "display:none" type="file" class = "rcorners third" name="file" id="upload" accept="image/png, image/jpeg"></input>
+                <input style = "text-align:center" style = "display:none" type="submit" class = "rcorners third" value="Submit">
             </form>
         </div>
     </body>
