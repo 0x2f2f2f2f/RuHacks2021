@@ -5,6 +5,9 @@
     width: 200px;
     height: 150px;
 }
+.firstDisplay {
+    text-align: center;
+}
 .secondDisplay{
     display: none;
     text-align: center;

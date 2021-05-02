@@ -27,6 +27,7 @@ document.getElementById('imageForm').onsubmit = function(event){
 
         var sentence = document.createElement("h1");
         var text = document.createTextNode(this.response);
+        sentence.className = "firstDisplay";
         sentence.appendChild(text);
         sentenceDiv.appendChild(sentence);
         console.log(xhttp.status);
