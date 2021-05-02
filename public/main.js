@@ -1,5 +1,6 @@
 const upload = document.getElementById("upload");
 const image = document.getElementById("image");
+const sentenceDiv = document.getElementById("sentences");
 
 $('.first').addClass('animated fadeInUp');
 
@@ -19,6 +20,14 @@ document.getElementById('imageForm').onsubmit = function(event){
     var xhttp = new XMLHttpRequest(); // create new AJAX request
 
     xhttp.onreadystatechange = function() {
+        while(sentenceDiv.firstChild){
+            sentenceDiv.removeChild(sentenceDiv.firstChild);
+        }
+        
+        var sentence = document.createElement("h1");
+        var text = document.createTextNode(this.response);
+        sentence.appendChild(text);
+        sentenceDiv.appendChild(sentence);
         console.log(xhttp.status);
         console.log(this.response);
     }
