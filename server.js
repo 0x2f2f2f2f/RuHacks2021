@@ -32,5 +32,5 @@ app.post('/upload', upload.single('file'), (req, res, next) => {
 });
 
 app.use(express.static('public'));
-app.listen(3000);
+app.listen(80);
 console.log("displaying at http://localhost:3000");
