@@ -25,6 +25,10 @@
     -ms-animation-duration:2.5s;
     animation-duration:2.5s;
 }
+.form{
+    margin: 0 auto;
+    width: 250px;
+}
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;
